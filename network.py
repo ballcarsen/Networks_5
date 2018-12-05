@@ -180,7 +180,6 @@ class Router:
     #  @param p Packet to forward
     #  @param i Incoming interface number for packet p
     def process_network_packet(self, pkt, i):
-        #TODO: encapsulate the packet in an MPLS frame based on self.encap_tbl_D
         #for now, we just relabel the packet as an MPLS frame without encapsulation
         m_fr = pkt
         print('%s: encapsulated packet "%s" as MPLS frame "%s"' % (self, pkt, m_fr))
